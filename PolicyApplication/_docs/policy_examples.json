@@ -1,0 +1,46 @@
+{
+  "examples": [
+    {
+      "endpoint": "GET /policy/000222333",
+      "request": null,
+      "response": {
+        "policyNumber": "000222333",
+        "value": 15000.50,
+        "insured": "João da Silva"
+      }
+    },
+    {
+      "endpoint": "GET /policy/999999999",
+      "request": null,
+      "response": {
+        "status": 404,
+        "message": "Not Found"
+      }
+    },
+    {
+      "endpoint": "POST /policy/change",
+      "request": {
+        "policyNumber": "123456789",
+        "value": 20000.00,
+        "insured": "Maria Oliveira"
+      },
+      "response": {
+        "policyNumber": "123456789",
+        "value": 20000.00,
+        "insured": "Maria Oliveira"
+      }
+    },
+    {
+      "endpoint": "POST /policy/change",
+      "request": {
+        "policyNumber": "",
+        "value": 10000.00,
+        "insured": "Carlos Souza"
+      },
+      "response": {
+        "status": 400,
+        "message": "Dados inválidos."
+      }
+    }
+  ]
+}
